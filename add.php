@@ -17,6 +17,8 @@
 5.1) Show a message if something went wrong
 
 //HOMEWORK
+-1) Read that php book i gave you - the first chapter on syntax
+0) read the code you have and ask questions and understand it.
 1) Add a phone number column to the user table
 2) Add a phone number text field to the add user form
 3) Inlucde the phone number data in the cehck for empty and into the building of the SQL Query
