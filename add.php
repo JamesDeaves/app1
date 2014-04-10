@@ -15,6 +15,13 @@
 4) execute the sql
 5) show a message that it worked
 5.1) Show a message if something went wrong
+
+//HOMEWORK
+1) Add a phone number column to the user table
+2) Add a phone number text field to the add user form
+3) Inlucde the phone number data in the cehck for empty and into the building of the SQL Query
+4) Extra hard : Build the list.php page out to read all the users from the database and list the details in a table
+	notes: foreach loops, mysqli in php, and fetch_assoc http://uk3.php.net/manual/en/mysqli-result.fetch-assoc.php
 */
 
 if (!empty($_POST['name']) && !empty($_POST['job_title'])) {
