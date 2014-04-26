@@ -1,5 +1,5 @@
 <h1>Add User</h1>
-<form action="/?page=add" method="POST">
+<form action="/?page=testing" method="POST">
 	<label for="txtname">Name</label>
 	<input id="txtname" name="name" type="text">
 	<br/>
@@ -8,6 +8,24 @@
 	<br/>
 	<label for="txtphonenumber">Phone Number</label>
 	<input id="txtphonenumber" name="phone_number" type="text">
+	<br/>
+	<label for="txtadd1">Address Line 1</label>
+	<input id="txtadd1" name="add1" type="text">
+	<br/>
+	<label for="txtadd2">Address Line 2</label>
+	<input id="txtadd2" name="add2" type="text">
+	<br/>
+	<label for="txtadd3">Address Line 3</label>
+	<input id="txtadd3" name="add3" type="text">
+	<br/>
+	<label for="txtcounty">County</label>
+	<input id="txtcounty" name="county" type="text">
+	<br/>
+	<label for="txtcountry">Country</label>
+	<input id="txtcountry" name="country" type="text">
+	<br/>
+	<label for="txtpostcode">Post Code</label>
+	<input id="txtpostcode" name="post_code" type="text">
 	<input type="submit" value="Add User">
 </form>
 <?php
@@ -29,7 +47,8 @@
 	notes: foreach loops, mysqli in php, and fetch_assoc http://uk3.php.net/manual/en/mysqli-result.fetch-assoc.php
 */
 
-if (!empty($_POST['name']) && !empty($_POST['job_title']) && !empty($_POST['phone_number'])) {
+if (!empty($_POST['name']) && !empty($_POST['job_title'])) {	
+
 	echo '<b>we got data</b>';
 
 	$mysqli = new mysqli("localhost", "root", "", "app1");
@@ -37,7 +56,7 @@ if (!empty($_POST['name']) && !empty($_POST['job_title']) && !empty($_POST['phon
 	    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	}
 
-	$query = 'INSERT INTO USERS (id, name, job_title, phone_number) VALUES ("' . uniqid() . '", "' . $_POST['name'] . '", "' . $_POST['job_title'] . '", "' . $_POST['phone_number'] . '");';
+	$query = 'INSERT INTO USERS (id, name, job_title, phone_number, add1, add2, add3, county, country, post_code) VALUES ("' . uniqid() . '", "' . $_POST['name'] . '", "' . $_POST['job_title'] . '", "' . $_POST['phone_number'] . '", "' . $_POST['add1'] . '", "' . $_POST['add2'] . '", "' . $_POST['add3'] . '", "' . $_POST['county'] . '", "' . $_POST['country'] . '", "' . $_POST['post_code'] . '");';
 		echo $query;
 	echo '<br>';
 
@@ -48,3 +67,6 @@ if (!empty($_POST['name']) && !empty($_POST['job_title']) && !empty($_POST['phon
 	}
 }
 ?>
+
+
+

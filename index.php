@@ -6,8 +6,10 @@
 
 <div id="nav">
 	<ul>
+	    <li><a href="/?page=add">Add Users</a></li>
 		<li><a href="/?page=list">List Users</a></li>
-		<li><a href="/?page=add">Add Users</a></li>
+		<li><a href="/?page=testing">Test Page One</a></li>
+		<li><a href="/?page=testing2">Test Page Two</a></li>
 	</ul>
 </div>
 
